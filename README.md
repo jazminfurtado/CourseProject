@@ -10,17 +10,30 @@ The activity names, previously numbers, are replaced with verb that the subject 
 Another data set, Tidy2, was created averaging the columns by activity and subject, but is not included in this script.
 
 (2)The variables in the data table, Tidy, are as follows:
+
 ID: The  subject/volunteer of the measurements with a range of 1:30
+
 Activity: One of the six activities the subjects performed
+
 features
+
 	prefix 't':denotes time, as there are time domain signals
+
 	'BodyAcc': the measured acceleration signal filtered to body acceleration signal
+
 	'GravityAcc': the measured acceleration signal filtered to gravity acceleration
+
 	'Jerk':jerk signals obtained by either the acceleration or angular velocity
+
 	'BodyGyro':signal originating from the gyroscope
+
 	'Mag': the magnitude of the specific signal calculated using the Euclidean norm
+
 	prefix 'f':denotes frequency, as the FFT was applied to some of the signals
+
 	'X','Y','Z': denotes one of the 3 axial signals that was measured
+
 	'mean()': Mean value
+
 	'std()': Standard deviation
 	
