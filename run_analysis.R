@@ -10,6 +10,7 @@ mergedTest<-cbind(y_test,x_test)
 x_train<-read.table(paste(getwd(),"/train/X_train.txt",sep=""))
 y_train<-read.table(paste(getwd(),"/train/y_train.txt",sep=""))
 mergedTrain<-cbind(y_train,x_train)
+#This is the complete data set with every measurement
 TrainAndTest<-rbind(mergedTest,mergedTrain)
 
 #The column names are originally separate before being extracted and integrated into the table
