@@ -1,8 +1,9 @@
 #This R file creates and cleans a data table, extracting measurements of mean and sd for 30 patients
 
 #The files are merged together, first by columns, then by rows
-setwd("C:/Users/C16Jazmin.Furtado/Desktop/SCHOOL/fall 2014/Math377/Math377fall2014R/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset")
-x_test<-read.table(paste(getwd(),"/test/X_test.txt",sep=""))
+###THESE FILES ARE TAKEN FROM THE CURRENT WORKING DIRECTORY WHICH SHOULD END WITH 
+  ###   "/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset"
+x_test<-read.table(paste(getwd(),"/test/X_test.txt",sep="")) 
 y_test<-read.table(paste(getwd(),"/test/y_test.txt",sep=""))
 mergedTest<-cbind(y_test,x_test)
 
@@ -19,8 +20,6 @@ as.character(names(TrainAndTest))
 names(TrainAndTest)[2:562]<-as.character(featureNames)
 
 #extract mean() and std()
-select(TrainAndTest,contains("mean()"))
-means<-select(TrainAndTest,contains("mean()"))
 meansAndStd<-TrainAndTest[,grepl("mean\\(\\)|std\\(\\)", names(TrainAndTest), ignore.case = FALSE, perl = FALSE,
                     fixed = FALSE, useBytes = FALSE)]
 #insert column with IDs
